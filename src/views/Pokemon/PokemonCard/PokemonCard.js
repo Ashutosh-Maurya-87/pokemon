@@ -1,5 +1,7 @@
 import React from "react";
+import pokewall from '../../../images/navimage.jpg';
 import "./style.scss";
+
 
 const PokemonCard = (props) => {
   console.log("props", props.props);
@@ -17,7 +19,8 @@ const PokemonCard = (props) => {
 
   return (
     <>
-      <div>
+      <div className='backgroundImg' style={{ backgroundImage:`url(${pokewall})`}}>
+        
         <figure className="card card--normal">
           <div className="card__image-container"></div>
 

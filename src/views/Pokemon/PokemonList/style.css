@@ -5,10 +5,17 @@
     cursor: pointer;
 }
 button{
+    position: sticky;
     margin: 10px;
     height: 50px;
     font-weight: bold;
+    border-radius: 5px;
     font-size: 20px;
     color:rgb(122, 12, 12);
-    background-color: rgb(156, 118, 46);
+}
+.backgroundImg{
+    background-color: darkslategray;
+}
+.card_name{
+    text-transform: capitalize;
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PokemonCard from "../PokemonCard/PokemonCard";
 import axios from "axios";
 import './style.css';
+import homewall from '../../../images/navimage.jpg';
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -34,7 +35,9 @@ function App() {
 
   return (
     <>
-      <div className="pokemons">
+    <div  style={{ backgroundImage:`url(${homewall})`, backgroundColor:"green"}}>
+      <div className="pokemons" >
+      
         <h1>Gotta catch 'em all</h1>
 
         <button onClick={fetchBtn}> {!showPokeCard ? "Get Pokemon" : "Get Other Pokemons"}</button>
@@ -70,6 +73,7 @@ function App() {
         </div>
       )}
       {showPokeCard && !showResult && <PokemonCard props={pokemonData} />}
+      </div>
     </>
   );
 }
