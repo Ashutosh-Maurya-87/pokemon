@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PokemonCard from "../PokemonCard/PokemonCard";
 import axios from "axios";
+import './style.css';
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -36,7 +37,7 @@ function App() {
       <div className="pokemons">
         <h1>Gotta catch 'em all</h1>
 
-        <button onClick={fetchBtn}>Load More</button>
+        <button onClick={fetchBtn}> {!showPokeCard ? "Get Pokemon" : "Get Other Pokemons"}</button>
       </div>
 
       {showResult && !showPokeCard && (
@@ -45,12 +46,9 @@ function App() {
             const { name = "", url: details = {} } = pokemon || {};
             return (
               <div
-                style={{
-                  display: "grid",
-                  cursor: "pointer",
-                }}
                 key={index}
                 id={`pokemon_${name}_${index}`}
+                className="pokemon"
               >
                 <figure
                   className="card card--normal"

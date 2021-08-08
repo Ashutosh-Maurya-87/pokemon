@@ -43,6 +43,7 @@ const PokemonCard = (props) => {
                   <th>Height</th>
                   <td>{height}</td>
                 </tr>
+
                 {/* -----stats--- */}
                 {stats.map((status, index) => {
                   const { base_stat = "", stat: { name = "" } = {} } =
@@ -54,22 +55,17 @@ const PokemonCard = (props) => {
                     </tr>
                   );
                 })}
+
               </tbody>
             </table>
 
             {abilities.map((avl, index) => {
               const { ability: { name = "" } = {} } = avl || {};
-              //   console.log("name", name);
               return (
                 <div className="card__abilities">
-                  {/* <h4 className="card__ability">
-                    <span className="card__label">Ability</span>
-                    <h3 className="card__type" key={index}>
-                      name
-                    </h3>
-                  </h4> */}
+               
                   <h4 className="card__ability">
-                    <span className="card__label">Ability</span>
+                    <span className="card__label">Ability {abilities.length > 0 ? index+ 1 : ''}</span>
                     {name}
                   </h4>
                 </div>
