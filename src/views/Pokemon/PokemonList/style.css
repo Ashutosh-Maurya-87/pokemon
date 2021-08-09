@@ -1,9 +1,10 @@
 .pokemon {
-    display :flex;
-    flex-direction: row;
-    justify-content:flex-start;
+    display :inline-grid;
+    grid-template-columns: auto auto auto;
     cursor: pointer;
+    text-transform: capitalize;
 }
+
 button{
     position: sticky;
     margin: 10px;
@@ -13,9 +14,21 @@ button{
     font-size: 20px;
     color:rgb(122, 12, 12);
 }
+
 .backgroundImg{
     background-color: darkslategray;
 }
-.card_name{
+
+.card__ability{
+    
     text-transform: capitalize;
+}
+
+.card__abilities{
+    
+    text-transform: capitalize;
+}
+
+th{
+    font-weight: bold;
 }

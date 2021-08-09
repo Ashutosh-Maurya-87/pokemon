@@ -21,7 +21,7 @@ const PokemonCard = (props) => {
     <>
       <div className='backgroundImg' style={{ backgroundImage:`url(${pokewall})`}}>
         
-        <figure className="card card--normal">
+        <figure className="card card--normal" style={{textTransform:"capitalize"}}>
           <div className="card__image-container"></div>
 
           <figcaption className="card__caption">
@@ -52,7 +52,8 @@ const PokemonCard = (props) => {
                   const { base_stat = "", stat: { name = "" } = {} } =
                     status || {};
                   return (
-                    <tr key={index}>
+                    <tr className='card_name'
+                    key={index}>
                       <th>{name}</th>
                       <td>{base_stat}</td>
                     </tr>

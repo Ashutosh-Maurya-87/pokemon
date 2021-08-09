@@ -35,16 +35,16 @@ function App() {
 
   return (
     <>
-    <div  style={{ backgroundImage:`url(${homewall})`, backgroundColor:"green"}}>
-      <div className="pokemons" >
+    <div >
+      <div className="pokemons" style={{background: "linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%)"}} >
       
-        <h1>Gotta catch 'em all</h1>
+        <h1 style={{background: "linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%)", fontWeight:"bold"}}>Gotta catch 'em all</h1>
 
         <button onClick={fetchBtn}> {!showPokeCard ? "Get Pokemon" : "Get Other Pokemons"}</button>
       </div>
 
       {showResult && !showPokeCard && (
-        <div>
+        <div style={{ background: "linear-gradient(120deg, #1cb5e0 0%, #000851 100%)",}}>
           {pokemons.map((pokemon, index) => {
             const { name = "", url: details = {} } = pokemon || {};
             return (
@@ -52,6 +52,11 @@ function App() {
                 key={index}
                 id={`pokemon_${name}_${index}`}
                 className="pokemon"
+                style={{ 
+                  
+                  backgroundColor: "rgba(#ffffff, 0.65)",
+                  height: "100%",
+               }}
               >
                 <figure
                   className="card card--normal"
